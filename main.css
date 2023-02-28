@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+:root{
+    --font-size-p:17px;
+    --font-size-h3:1.4em;
+    --color-p-color: #D0D0D0;
+    --font-weight-h3:500;
+    --font-weight-p:400;
+    --line-height-h3:3.5rem;
+    --color-h3-click:#000000;
+}
+.mg-b{
+    margin-bottom: 25px;
+}
+h3{
+font-size: var(--font-size-h3);
+line-height: var(--line-height-h3);
+text-transform: uppercase;
+font-weight:var(--font-weight-h3) ;
+}
+p{
+font-size: var(--font-weight-p);
+color: var(--color-p-color);
+opacity: 0.7;
+}
+a{
+    display: block;
+    color: var(--color-p-color);
+}
+i{
+    color: #CC0000;
+    padding-right: 10px;
+}
+/* span{
+   color: #ffffff;
+    font-size:25px;
+} */
+.wrapper{
+color: #ffffff;
+
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 2fr));
+    column-gap: 7rem;
+    background: #151515;
+    box-shadow: 0px 2.52585px 31.5731px rgba(0, 0, 0, 0.5);
+    justify-items: center;
+    margin: 2% 10%;
+}
+.main.color-p p{
+    color: #000000;
+    opacity: 0.5;
+}
+.main .section-name h3>span.color-h3{
+    color: var(--color-h3-click);
+}
+.main-col{
+    line-height: 1.7rem;
+    padding: 80px 60px 60px 60px;
+}
+.section-name h3:not(span){
+    font-size: 15px;
+    line-height: 2rem;
+    color: var(--color-p-color);
+}
+.main-col .section-introduce{
+    display: flex;
+    margin-bottom: 4rem;
+    align-items: center;
+    gap:2rem
+}
+.main-col .section-name{
+    display: flex;
+    flex-direction: column;
+}
+.main-col .section-contact a{
+    line-height: 2.4rem;
+}
+.main-col .section-contact a:nth-child(4){
+    text-decoration: revert;
+}.main-col .section-contact a:nth-child(5){
+    text-decoration: revert;
+}
+.main-col .section-knowledge li{
+    list-style: none;
+    line-height: 2.3rem;
+}
+.main-col .section-knowledge li::before{
+    content:'\2022';
+      /* For a square bullet */
+      /*content:'\25A0';*/
+      display: block;
+      position: relative;
+      max-width: 0px;
+      max-height: 0px;
+      left: -15px;
+      top: -0px;
+      color: #CC0000;
+      font-size: 15px;
+}
+.main-aside .aside-skills .myskill{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+    row-gap: 50px;
+}
+.main-aside .aside-skills img,.main-aside .aside-otherskills img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+  }
+  .aside-otherskills .otherskills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    row-gap: 50px;
+}
+.main-aside p{
+    line-height: 2.2rem;
+}
+/* Change back ground */
+.flatRoundedCheckbox
+{
+    width: 120px;
+    height: 40px;
+    margin: 20px 50px;
+    position: absolute;
+    left: 20%;
+}
+.flatRoundedCheckbox span
+{
+    display: block;
+    width: 100%;
+    height:100%;
+    background: #d3d3d3;
+    border-radius: 50px;
+    position: relative;
+    top:-30px;
+}   
+/* tạo nút bấm */
+.flatRoundedCheckbox label{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    transition: all .25s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+    left: 8px;
+    top: -6px;
+    background: #FFF;
+}
+/* Và hiệu ứng khi click */
+.flatRoundedCheckbox input[type=checkbox]:checked ~ span
+{
+    background: #4fbe79;
+}
+ 
+.flatRoundedCheckbox input[type=checkbox]:checked ~ label {
+    left: 85px;
+    
+}
+.flatRoundedCheckbox p{
+    position: absolute;
+    left: 41px;
+    z-index: 1;
+    color: #151515;
+    text-transform: uppercase;
+    font-size: 11px;
+    top: 4px;
+}
+.change-backgound-main{
+    background-color: #ffffff;
+    box-shadow: 2px 2.52585px 31.5731px rgba(235, 234, 234, 0.5);
+}
+.change-backgound-wrapper{
+    background-color: #000000;
+}
+.hide-mon{
+    display: none;
+}
+.color-h3{
+    color: #000000;
+}
+
+/* button {
+    background-color: #4CAF50; /* màu nền mặc định của nút */
+    /* color: white; /* màu chữ mặc định của nút */
+  /* } */ */
+  
+/* button.active {
+    background-color: #008CBA; /* màu nền khi nút được bật sáng */
+    /* color: white; /* màu chữ khi nút được bật sáng */
+  /* } */ */
+  /* .change-background{
+    background-color: #ffff; */
+  /* } */ */ */
+  
+  
+
+ 

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+    <title>CV-2022</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <!--***************************** Columns1*********************** -->
+            <div class="main-col">
+                <div class="section-introduce">
+                    <div class="section-avatar">
+                        <img src="./img/avatar-me.jpg" alt="null" width="190px" height="190px"
+                            style="border-radius: 50%;">
+                    </div>
+                    <div class="section-name">
+                        <h3>Nguyen <br>
+                            <span style="font-size: 25px;">Khac Dat</span>
+                        </h3>
+                        <p>Font-end DEVELOPER </p>
+                    </div>
+                </div>
+                <div class="section-aboutme mg-b">
+                    <h3>About me</h3>
+                    <p>Hi! I’m <span style="color:#ffff;font-size: 20px;"> Khac Dat</span></p>
+                    <p>Nothing special, just another UI/UX designer and 3D artist,... <br>
+                        currently I working and learning at Ha Noi, Viet Nam.</p>
+                </div>
+                <div class="section-contact mg-b">
+                    <h3>Contact</h3>
+                    <a href=""><i class="fa-solid fa-envelope"></i>Email: nguyenkhachieu051199@gmail.com</a>
+                    <a href=""><i class="fa-sharp fa-solid fa-location-dot"></i>Address: Ha Noi, Viet Nam</a>
+                    <a href=""><i class="fa-brands fa-facebook"></i>fb/hieu.nguyenkhac.355/</a>
+                    <a href=""><i class="fa-brands fa-line"></i>www.artstation.com/nguyenkhachieu051199</a>
+                </div>
+                <div class="section-knowledge mg-b">
+                    <h3>Industry Knowledge</h3>
+                    <ul>
+                        <li>
+                            <p>User Interface</p>
+                        </li>
+                        <li>
+                            <p>User Interface</p>
+                        </li>
+                        <li>
+                            <p>User Interface</p>
+                        </li>
+                        <li>
+                            <p>User Interface</p>
+                        </li>
+                        <li>
+                            <p>User Interface</p>
+                        </li>
+                        <li>
+                            <p>User Interface</p>
+                        </li>
+                        <li>
+                            <p>User Interface</p>
+                        </li>
+                        <!-- <li><button id="myButton" onclick="toggleButton()">Click me!</button></li> -->
+                    </ul>
+                </div>
+                <div class="section-language">
+                    <h3>Language</h3>
+                    <p>+ English (reading comprehension) </p>
+                </div>
+            </div>
+
+            <!--***************************** Columns2*********************** -->
+            <div class="main-col">
+                <div class="main-aside mg-b">
+                    <div class="aside-profile mg-b">
+                        <h3 class="mg-b">Profile</h3>
+                        <p>+ This is reseach on ReactJS</p>
+                        <p>+ Have experience in JAVASCRIPT, HTML, CSS, Bootstrap,Jquery,GIT,...</p>
+                        <p>+ Hard working and high responsibility to assigned tasks. Could work overtime upon request.</p>
+                        <p>+ Ability to work as individual as well as good team worker,Cooperative <br>
+                            and able to perform well under pressure of working environment.</p>
+                    </div>
+                    <div class="aside-education mg-b">
+                        <h3 class="mg-b">Education</h3>
+                        <p>+ APTECHVIETNAM |</p>
+                        <p>+ 2021 - Present</p>
+                    </div>
+                    <div class="aside-skills mg-b">
+                        <h3 class="mg-b">My skills</h3>
+                    <div class="myskill">
+                        <img src="img/GIT.png" alt="null">
+                        <img src="img/sass.png" alt="null">
+                        <img src="img/responsive.png" alt="null">
+                        <img src="img/react.png" alt="null">
+                        <img src="img/boostrap.png" alt="null">
+                        <img src="img/js.png" alt="null">
+                        <img src="img/html.png" alt="null">
+                        <img src="img/css.png" alt="null">
+                    </div>
+                    </div>
+                    <div class="aside-otherskills mg-b">
+                        <h3 class="mg-b">Other skills</h3>
+                        <div class="otherskills">
+                            <img src="img/PHP.png" alt="">
+                            <img src="img/SQL.png" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="flatRoundedCheckbox">  
+            <p>bright/dark</p> 
+            <input type="checkbox" name="" id="flatOneRoundedCheckbox" >
+            <label for="flatOneRoundedCheckbox"></label>
+            <span></span>
+          </div>
+        </div>
+        
+    </div>  
+        <script>
+            let body = document.querySelector("body")
+            let wrapper = document.querySelector(".wrapper")
+            let wrapperp = document.querySelector(".wrapper p")
+           let form = document.querySelector(".flatRoundedCheckbox")
+           let hide_mon = document.querySelector(".flatRoundedCheckbox p")
+           let main = document.querySelector(".main");
+           console.log("🚀 ~ file: index.html:131 ~ main:", main)
+           let change =  document.querySelector("#flatOneRoundedCheckbox");  
+           let main_name_span = document.querySelector(".main .section-name h3>span");         
+           console.log("🚀 ~ file: index.html:136 ~ main_name_span:", main_name_span)
+           
+           
+           change.addEventListener('click', function () {
+            body.classList.toggle("change-backgound-wrapper")
+            main.classList.toggle("change-backgound-main")
+            main.classList.toggle("color-p") 
+            hide_mon.classList.toggle("hide-mon")
+            wrapper.classList.toggle("color-h3")
+            main_name_span.classList.toggle("color-h3")
+            });
+        </script>
+    <!-- <script>
+        function toggleButton() {
+            let wrapper = document.querySelector(".main")
+            var button = document.getElementById("myButton");
+            wrapper.classList.toggle('change-background');
+            button.classList.toggle("active");
+        }
+    </script> -->
+</body>
+
+</html>

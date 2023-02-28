@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+     
+    }
+    body{
+        background-color: #333;
+    }
+    /* Style cho checkbox */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px; /* vị trí ban đầu của checkbox */
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+/* Tạo hình tròn bên trong checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Tạo checkmark cho checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* Khi checkbox được check */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Khi checkbox được check và tạo checkmark */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Khi checkbox được check và tạo checkmark */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Tạo checkmark dạng x */
+.checkbox-container .checkmark:after {
+  left: 10px;
+  top: 5px;
+  width: 5px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Checkbox sang trái */
+.checkbox-container.checkbox-left input:checked ~ .checkmark {
+  left: -5px;
+}
+
+/* Checkbox sang phải */
+.checkbox-container.checkbox-right input:checked ~ .checkmark {
+  right: -5px;
+  left: auto;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav button#toggle-menu {
+  display: none;
+}
+
+nav span#close-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 20px;
+    transition: all 5s ease;
+  }
+
+  nav ul li {
+    margin: 0 0 20px 0;
+    transition: all 5s ease;
+  }
+
+  nav button#toggle-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  nav.open ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 5s ease;
+  }
+
+  nav.open span#close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: all 5s ease;
+  }
+}
+
+
+
+</style>
+<body>
+      <nav>
+        <ul>
+          <li><a href="#">Menu item 1</a></li>
+          <li><a href="#">Menu item 2</a></li>
+          <li><a href="#">Menu item 3</a></li>
+          <li><a href="#">Menu item 4</a></li>
+        </ul>
+        <button id="toggle-menu">Menu</button>
+        <span id="close-menu">X</span>
+      </nav>
+      
+      <script>
+ const toggleMenu = document.querySelector('nav button#toggle-menu');
+const closeMenu = document.querySelector('nav span#close-menu');
+const nav = document.querySelector('nav');
+
+toggleMenu.addEventListener('click', function() {
+  nav.classList.add('open');
+  toggleMenu.style.opacity="0";
+  toggleMenu.style.transition="all .55s ease"
+  closeMenu.style.opacity="1";
+});
+
+closeMenu.addEventListener('click', function() {
+  nav.classList.remove('open');
+  toggleMenu.style.opacity="1";
+  closeMenu.style.opacity="0";
+  closeMenu.style.transition="all .55s ease"
+  
+});
+
+
+
+      </script>
+</body>
+</html>
